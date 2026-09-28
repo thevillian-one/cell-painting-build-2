@@ -1,0 +1,21 @@
+# Stage 0 discovery specification, NOT a validated scientific lockfile.
+# Python 3.12. The runner resolves transitive dependencies once, records the
+# pip installation report and creates a hashed, platform-specific lock.
+pycytominer==1.7.1
+copairs==0.5.4
+numpy
+pandas
+scipy
+pyarrow
+scikit-learn
+streamlit
+tifffile
+Pillow
+plotly
+matplotlib
+pytest
+pytest-cov
+playwright
+PyYAML
+jsonschema
+boto3

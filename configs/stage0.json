@@ -1,0 +1,18 @@
+{
+  "stage": 0,
+  "repository": "jump-cellpainting/2024_Chandrasekaran_NatureMethods_CPJUMP1",
+  "source_ref": "main",
+  "metadata_path": "benchmark/output/experiment-metadata.tsv",
+  "bucket": "cellpainting-gallery",
+  "prefix": "cpg0000-jump-pilot/source_4/workspace/backend/2020_11_04_CPJUMP1/BR00117015/",
+  "plate": "BR00117015",
+  "batch": "2020_11_04_CPJUMP1",
+  "max_profile_bytes": 268435456,
+  "max_uncompressed_bytes": 1073741824,
+  "max_metadata_bytes": 2097152,
+  "sample_rows": 3,
+  "max_listing_pages": 5,
+  "min_free_disk_bytes": 4294967296,
+  "profile_claim": "Unnormalized well-level aggregate candidate; source stage and row schema verified only, cohort qualification remains Stage 1.",
+  "spending_authorization": 0
+}

@@ -1,0 +1,22 @@
+# Only the prepared bootstrap source belongs in this repository.
+.stage0-venv/
+stage0-output/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.log
+.env
+.env.*
+*.key
+*.pem
+.DS_Store
+Thumbs.db
+# Prevent raw experimental files or accidental private exports entering Git.
+*.csv
+*.csv.gz
+*.parquet
+*.sqlite
+*.tif
+*.tiff
+*.xlsx
+*.zip
