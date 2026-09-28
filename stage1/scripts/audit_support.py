@@ -107,8 +107,8 @@ def canonical_well(x):
 def open_text(path):
     path = Path(path)
     if path.name.endswith('.gz'):
-        return gzip.open(path, 'rt', encoding='utf-8-sig', newline='')
-    return path.open('r', encoding='utf-8-sig', newline='')
+        return gzip.open(path, 'rt', encoding='latin-1', newline='')
+    return path.open('r', encoding='latin-1', newline='')
 
 
 def inspect_profile(path, expected_plate=None, numeric_qc=True):
