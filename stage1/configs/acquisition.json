@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "authorized_stage": 1,
+  "substage": "1A",
+  "scope": "Complete pilot file acquisition; metadata and object inventory only for external candidate cohorts.",
+  "total_download_limit_bytes": 805306368,
+  "metadata_object_limit_bytes": 16777216,
+  "profile_object_limit_bytes": 134217728,
+  "max_sources_per_dataset": 12,
+  "max_listing_pages": 30,
+  "expected_pilot_metadata_sha256": "86d845dc152cbc3569072160e5881d550364dd9caf0336e5daa6adc5b63b1852",
+  "expected_first_profile_sha256": "66e809b0ab20cba2020b255b7c7c3f0fd10819430c17c2e21bff3ef2ff863839",
+  "repositories": [
+    {
+      "repo": "jump-cellpainting/2024_Chandrasekaran_NatureMethods_CPJUMP1",
+      "ref": "56845c7d4dc322652952783d91dae0ffef47829f"
+    },
+    {
+      "repo": "jump-cellpainting/JUMP-Target"
+    },
+    {
+      "repo": "jump-cellpainting/JUMP-MOA"
+    },
+    {
+      "repo": "carpenter-singh-lab/2023_Cimini_NatureProtocols"
+    },
+    {
+      "repo": "jump-cellpainting/jump-scope"
+    },
+    {
+      "repo": "jump-cellpainting/jump-scope-analysis"
+    },
+    {
+      "repo": "broadinstitute/cellpainting-gallery"
+    }
+  ],
+  "no_scientific_scoring": true,
+  "no_image_pixels": true,
+  "no_paid_resources": true,
+  "remaining_metadata_rule": "Resolve actual source revision and actual tree entries; never invent raw-object names."
+}

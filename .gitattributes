@@ -1,0 +1,8 @@
+# Scope byte-preservation to this additive Stage 1 package only.
+# Do not change Stage 0 files or their existing checksums.
+/.gitattributes -text
+/.github/workflows/stage1.yml -text
+/STAGE1_README.md -text
+/STAGE1_CHECKSUMS.sha256 -text
+/VERIFY_STAGE1.cmd -text
+/stage1/** -text

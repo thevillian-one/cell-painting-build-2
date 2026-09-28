@@ -1,0 +1,17 @@
+{
+  "stage0": "PASSED",
+  "checksum_matches": 78,
+  "imported_package_count": 18,
+  "tests": {
+    "tests": 30,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "browser_passed": true,
+  "known_answer_passed": true,
+  "scope": "Verification of returned external-run evidence, not new local specialist imports.",
+  "raw_profile_sha256": "66e809b0ab20cba2020b255b7c7c3f0fd10819430c17c2e21bff3ef2ff863839",
+  "upstream_revision": "56845c7d4dc322652952783d91dae0ffef47829f",
+  "verified_at": "2026-09-28T04:03:29.668967+00:00"
+}
