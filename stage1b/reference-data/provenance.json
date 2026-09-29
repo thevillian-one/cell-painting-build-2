@@ -1,0 +1,86 @@
+[
+  {
+    "path_in_stage1a": "source-data/repos/jump-cellpainting__pilot-data-public/metadata/platemaps/Stain5_CondAB_Standard/platemap/JUMP-MOA_compound_platemap_with_metadata.txt",
+    "bytes": 58198,
+    "sha256": "44431e5d24703198fdb2dedf3b126af0cdddb09b04137aa2fd2d3a7c547801ff",
+    "role": "source layout with embedded annotations; delimiter normalized to TSV"
+  },
+  {
+    "path_in_stage1a": "source-data/repos/jump-cellpainting__pilot-data-public/metadata/platemaps/2020_09_22_Stain4_Standard/platemap/JUMP-MOA_compound_platemap_with_metadata.txt",
+    "bytes": 58198,
+    "sha256": "44431e5d24703198fdb2dedf3b126af0cdddb09b04137aa2fd2d3a7c547801ff",
+    "role": "source layout with embedded annotations; delimiter normalized to TSV"
+  },
+  {
+    "path_in_stage1a": "source-data/repos/jump-cellpainting__pilot-data-public/metadata/platemaps/2020_12_11_Reagent1_Pfizer/platemap/JUMP-MOA_compound_platemap_with_metadata.txt",
+    "bytes": 58198,
+    "sha256": "44431e5d24703198fdb2dedf3b126af0cdddb09b04137aa2fd2d3a7c547801ff",
+    "role": "source layout with embedded annotations; delimiter normalized to TSV"
+  },
+  {
+    "path_in_stage1a": "source-data/repos/jump-cellpainting__jump-scope/metadata/platemaps/Scope1_PE_Bin1_Confocal_1Plane/platemap/JUMP-MOA_compound_platemap.txt",
+    "bytes": 11379,
+    "sha256": "84b9d675b08ad0ecb6b844ce6d50d72a35948620f90a5da04d595f0993c22ecc",
+    "role": "scope source layout"
+  },
+  {
+    "path_in_stage1a": "source-data/repos/jump-cellpainting__jump-scope/metadata/external_metadata/JUMP-MOA_compound_metadata.tsv",
+    "bytes": 13153,
+    "sha256": "cf76ad0cb1911df8cde2e079070b38b25ff3fff4d5a5e8f6b7f042ded28ae14e",
+    "role": "scope source annotation, exact broad_sample join; explicit negative-control annotation"
+  },
+  {
+    "path_in_stage1a": "source-data/repos/jump-cellpainting__pilot-data-public/LICENSE",
+    "bytes": 1518,
+    "sha256": "bfb4ebea1f50f36ebfb5d11aee13504d5eb9b046a99aa31430f9bda66980f488",
+    "role": "upstream license notice"
+  },
+  {
+    "path_in_stage1a": "source-data/repos/jump-cellpainting__jump-scope/LICENSE",
+    "bytes": 1518,
+    "sha256": "bfb4ebea1f50f36ebfb5d11aee13504d5eb9b046a99aa31430f9bda66980f488",
+    "role": "upstream license notice"
+  },
+  {
+    "path_in_stage1a": "source-data/repos/carpenter-singh-lab__2023_Cimini_NatureProtocols/LICENSE",
+    "bytes": 1520,
+    "sha256": "e5dfe0fb83c5444c8008bf5a000bb0e63eecb75500acf88dc38458e3b19f28ec",
+    "role": "upstream license notice"
+  },
+  {
+    "path_in_stage1a": "provenance/repos/carpenter-singh-lab__2023_Cimini_NatureProtocols/tree.json",
+    "bytes": 70969,
+    "sha256": "a1d88a10c8b5e0a6494ff2e9ef02eb37ff81a254689fe61b211a3cb7697190f9",
+    "role": "original listing/tree supporting frozen target selection"
+  },
+  {
+    "path_in_stage1a": "provenance/repos/jump-cellpainting__jump-scope-analysis/tree.json",
+    "bytes": 20274,
+    "sha256": "f9c8e621526059ee8521c2709ce2f19a69d88a9f176818161b70f307fbeac746",
+    "role": "original listing/tree supporting frozen target selection"
+  },
+  {
+    "path_in_stage1a": "provenance/repos/jump-cellpainting__jump-scope/tree.json",
+    "bytes": 997402,
+    "sha256": "9692c6ed653cf77fa5b840246078786abb2f1140a55d7938629986ce803a4f46",
+    "role": "original listing/tree supporting frozen target selection"
+  },
+  {
+    "path_in_stage1a": "provenance/repos/jump-cellpainting__pilot-data-public/tree.json",
+    "bytes": 469788,
+    "sha256": "4ae9bca2ec0a8f5f6511713b951c138859d3efdef7b17297761e758d3bdfddce",
+    "role": "original listing/tree supporting frozen target selection"
+  },
+  {
+    "path_in_stage1a": "provenance/s3/cpg0001-cellpainting-protocol-source_4-workspace-backend--1.xml",
+    "bytes": 81378,
+    "sha256": "894623fc7a9e84a869b0e2f2c5bcc94b7defaa81b738e5ee5f907779fa711da0",
+    "role": "original listing/tree supporting frozen target selection"
+  },
+  {
+    "path_in_stage1a": "provenance/s3/cpg0002-jump-scope-source_4-workspace-backend--1.xml",
+    "bytes": 116798,
+    "sha256": "a83755b028d50737ee4348368c5581a880a1f91921323ea32d20e4c47a895090",
+    "role": "original listing/tree supporting frozen target selection"
+  }
+]

@@ -1,0 +1,199 @@
+{
+  "schema": 1,
+  "stage1_passed": false,
+  "pilot": {
+    "wells": 1536,
+    "per_plate": {
+      "BR00117015": {
+        "treatment": 260,
+        "negative_control": 64,
+        "positive_control": 60
+      },
+      "BR00117016": {
+        "treatment": 260,
+        "negative_control": 64,
+        "positive_control": 60
+      },
+      "BR00117017": {
+        "treatment": 260,
+        "negative_control": 64,
+        "positive_control": 60
+      },
+      "BR00117019": {
+        "treatment": 260,
+        "negative_control": 64,
+        "positive_control": 60
+      }
+    },
+    "source_sample_ids": 306,
+    "source_inchikeys": 306,
+    "unique_display_names": 302,
+    "duplicate_display_name_groups": 4,
+    "single_position_samples": 292,
+    "multiple_position_samples": 14,
+    "cross_plate_query_count": 1280,
+    "cross_plate_directed_positive_pairs": 4176,
+    "cross_plate_directed_negative_pairs": 245760,
+    "different_position_assessable_queries": 112,
+    "current_annotation_key_changes": 125,
+    "feature_families": {
+      "AreaShape": 162,
+      "Children": 3,
+      "Correlation": 672,
+      "Granularity": 384,
+      "Intensity": 360,
+      "Location": 152,
+      "Neighbors": 21,
+      "Number": 3,
+      "Parent": 3,
+      "RadialDistribution": 288,
+      "Texture": 3744
+    },
+    "brightfield_dependent_columns": 2277,
+    "all_prefixed_columns": 5792,
+    "status": "ACCEPTED_FOR_BOUNDED_REFERENCE_AND_WITHIN_EXPERIMENT_ANALYSIS_WITH_POSITION_LIMITATION"
+  },
+  "pilot_plates": [
+    {
+      "dataset": "cpg0000-jump-pilot",
+      "physical_plate_id": "BR00117015",
+      "acquisition_id": "2020_11_04_CPJUMP1/BR00117015",
+      "preparation_group": "2020_11_04_CPJUMP1",
+      "cell_line": "A549",
+      "genetic_state": "Parental",
+      "dose_um": 5,
+      "dose_evidence": "Chandrasekaran et al 2024 Methods / Experimental conditions / Compounds",
+      "exposure_hours": 48,
+      "seed_cells_per_well": 1000,
+      "imaging_repeat": 1,
+      "condition_id": "PILOT_A549_PARENTAL_48H_5UM_1000CELLS_DAY0",
+      "replication_level": "four physical plates within one experiment, not four independent batches"
+    },
+    {
+      "dataset": "cpg0000-jump-pilot",
+      "physical_plate_id": "BR00117016",
+      "acquisition_id": "2020_11_04_CPJUMP1/BR00117016",
+      "preparation_group": "2020_11_04_CPJUMP1",
+      "cell_line": "A549",
+      "genetic_state": "Parental",
+      "dose_um": 5,
+      "dose_evidence": "Chandrasekaran et al 2024 Methods / Experimental conditions / Compounds",
+      "exposure_hours": 48,
+      "seed_cells_per_well": 1000,
+      "imaging_repeat": 1,
+      "condition_id": "PILOT_A549_PARENTAL_48H_5UM_1000CELLS_DAY0",
+      "replication_level": "four physical plates within one experiment, not four independent batches"
+    },
+    {
+      "dataset": "cpg0000-jump-pilot",
+      "physical_plate_id": "BR00117017",
+      "acquisition_id": "2020_11_04_CPJUMP1/BR00117017",
+      "preparation_group": "2020_11_04_CPJUMP1",
+      "cell_line": "A549",
+      "genetic_state": "Parental",
+      "dose_um": 5,
+      "dose_evidence": "Chandrasekaran et al 2024 Methods / Experimental conditions / Compounds",
+      "exposure_hours": 48,
+      "seed_cells_per_well": 1000,
+      "imaging_repeat": 1,
+      "condition_id": "PILOT_A549_PARENTAL_48H_5UM_1000CELLS_DAY0",
+      "replication_level": "four physical plates within one experiment, not four independent batches"
+    },
+    {
+      "dataset": "cpg0000-jump-pilot",
+      "physical_plate_id": "BR00117019",
+      "acquisition_id": "2020_11_04_CPJUMP1/BR00117019",
+      "preparation_group": "2020_11_04_CPJUMP1",
+      "cell_line": "A549",
+      "genetic_state": "Parental",
+      "dose_um": 5,
+      "dose_evidence": "Chandrasekaran et al 2024 Methods / Experimental conditions / Compounds",
+      "exposure_hours": 48,
+      "seed_cells_per_well": 1000,
+      "imaging_repeat": 1,
+      "condition_id": "PILOT_A549_PARENTAL_48H_5UM_1000CELLS_DAY0",
+      "replication_level": "four physical plates within one experiment, not four independent batches"
+    }
+  ],
+  "external_candidates": [
+    {
+      "cohort_id": "protocol_stain5_thermo_standard",
+      "plates": [
+        "BR00120523",
+        "BR00120524",
+        "BR00120525",
+        "BR00120526"
+      ],
+      "n_physical_plates_design": 4,
+      "cell_line": "U2OS",
+      "exposure_hours": 48,
+      "seed_cells_per_well": 1000,
+      "reagent_supplier": "Thermo Fisher",
+      "dose_um": null,
+      "status": "CANDIDATE_PENDING_RAW_PROFILES_AND_APPLIED_DOSE",
+      "template_controls_per_plate": 24,
+      "potential_role": "development"
+    },
+    {
+      "cohort_id": "protocol_reagent1_thermo_standard",
+      "plates": [
+        "CPJUMP001",
+        "CPJUMP002",
+        "CPJUMP003",
+        "CPJUMP004"
+      ],
+      "n_physical_plates_design": 4,
+      "cell_line": "U2OS",
+      "exposure_hours": 48,
+      "seed_cells_per_well": 1000,
+      "reagent_supplier": "Thermo Fisher",
+      "dose_um": null,
+      "status": "CANDIDATE_PENDING_RAW_PROFILES_AND_APPLIED_DOSE",
+      "template_controls_per_plate": 24,
+      "potential_role": "independent_batch_candidate_with_site_and_processing_checks"
+    },
+    {
+      "cohort_id": "protocol_stain4_standard",
+      "plates": [
+        "BR00116629",
+        "BR00116630",
+        "BR00116631"
+      ],
+      "n_physical_plates_design": 3,
+      "cell_line": "U2OS",
+      "exposure_hours": 48,
+      "seed_cells_per_well": 2000,
+      "reagent_supplier": "Thermo Fisher",
+      "dose_um": null,
+      "status": "CANDIDATE_PENDING_RAW_PROFILES_AND_APPLIED_DOSE",
+      "template_controls_per_plate": 24,
+      "potential_role": "2000_cell_context_candidate"
+    },
+    {
+      "cohort_id": "scope_pe_c_bin1_1plane",
+      "plates": [
+        "CP_Broad_Phenix_C_BIN1_1Plane_P1",
+        "CP_Broad_Phenix_C_BIN1_1Plane_P2",
+        "CP_Broad_Phenix_C_BIN1_1Plane_P3",
+        "CP_Broad_Phenix_C_BIN1_1Plane_P4"
+      ],
+      "n_physical_plate_labels": 4,
+      "physical_identity_status": "P1-P4 acquisition labels; conservatively group all PE variants by suffix. Need authors mapping to exact preparations.",
+      "cell_line": "U2OS",
+      "dose_um": 3,
+      "dose_evidence": "Tromans-Coia 2023 Methods 4.1",
+      "seed_cells_per_well": 2000,
+      "exposure_hours": null,
+      "status": "CANDIDATE_PENDING_RAW_PROFILES_EXPOSURE_AND_PHYSICAL_MAPPING",
+      "potential_role": "acquisition/context transportability, not matched 1000-cell biological validation"
+    }
+  ],
+  "prohibited_comparison_roles": [
+    "A549 and U2OS as matched replicates",
+    "1000 and 2000 seeded cells as same condition",
+    "reimages of same material as independent experiments",
+    "source library mM as applied compound dose",
+    "display-name-only compound collapse"
+  ],
+  "stage2_authorized": false
+}

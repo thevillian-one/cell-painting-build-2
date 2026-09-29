@@ -1,0 +1,90 @@
+name: Stage 1B - targeted cohort acquisition
+on:
+  workflow_dispatch:
+    inputs:
+      authorize_stage1b:
+        description: 'Authorize Stage 1B public-data download; I have verified no paid Actions overages.'
+        required: true
+        default: false
+        type: boolean
+permissions:
+  contents: read
+concurrency:
+  group: cell-painting-stage1b
+  cancel-in-progress: false
+jobs:
+  acquire:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      PYTHONUNBUFFERED: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - name: Confirm Stage 1B authorization
+        env:
+          AUTHORIZED: ${{ inputs.authorize_stage1b }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p stage1b-evidence/logs
+          if [ "$AUTHORIZED" != 'true' ]; then
+            echo 'Stage 1B was not authorized. Run this workflow again with the authorization checkbox selected.' | tee stage1b-evidence/logs/authorization.log
+            exit 1
+          fi
+      - name: Retrieve exact repository commit and verify update
+        id: verify
+        shell: bash
+        run: |
+          set -euo pipefail
+          {
+            git init -b main
+            git config core.autocrlf false
+            git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+            git fetch --depth 1 origin "$GITHUB_SHA"
+            git checkout --detach FETCH_HEAD
+            test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+            sha256sum --strict -c stage1b/PACKAGE_CHECKSUMS.sha256
+          } 2>&1 | tee stage1b-checkout-console.log
+          echo 'verified=true' >> "$GITHUB_OUTPUT"
+      - name: Set up Python 3.12
+        uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c
+        with:
+          python-version: '3.12'
+      - name: Run offline regression tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s stage1b/tests -v 2>&1 | tee stage1b-tests-console.log
+      - name: Acquire targeted profiles and metadata only
+        shell: bash
+        run: |
+          set -euo pipefail
+          timeout 35m python stage1b/scripts/collect_targeted.py --config stage1b/configs/targeted-acquisition.json --output stage1b-evidence 2>&1 | tee stage1b-acquisition-console.log
+      - name: Package actual evidence even on failure
+        if: always()
+        shell: bash
+        env:
+          SOURCE_VERIFIED: ${{ steps.verify.outputs.verified }}
+        run: |
+          set -euo pipefail
+          mkdir -p stage1b-evidence/logs
+          if [ "$SOURCE_VERIFIED" = 'true' ]; then
+            python3 stage1b/scripts/collect_targeted.py --finalize --output stage1b-evidence --repo .
+          else
+            printf '%s\n' 'Stage 1B BLOCKED before verified source execution. See logs. Stage 2 NOT_STARTED.' > stage1b-evidence/BUILD_STATUS.md
+            for f in stage1b-*-console.log; do
+              [ ! -f "$f" ] || cp "$f" stage1b-evidence/logs/
+            done
+            (cd stage1b-evidence && find . -type f ! -name CHECKSUMS.sha256 -print0 | sort -z | xargs -0 sha256sum > CHECKSUMS.sha256)
+          fi
+      - name: Upload Stage 1B evidence
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        with:
+          name: stage1b-targeted-acquisition
+          path: stage1b-evidence/
+          if-no-files-found: error
+          include-hidden-files: true
+          retention-days: 7
+          compression-level: 6
